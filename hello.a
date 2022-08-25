@@ -1,14 +1,13 @@
 *=$0801
-	!byte $0E,$08,$0A,$00,$9E,$20,$28,$34
-	!byte $30,$39,$36,$29,$00,$00,$00
-*=$1000
+	!byte $0E,$08,$0A,$00,$9E,$20,$28,$32
+	!byte $30,$36,$34,$29,$00,$00,$00
 BASIC_PRINT_FILE = $AB1E
 START
 	lda #<HELLOWORLD
 	ldy #>HELLOWORLD
 	jsr BASIC_PRINT_FILE
 	inc $d021
-	jmp START
+	jmp *
 
 HELLOWORLD
 	!text "HELLO WORLD"

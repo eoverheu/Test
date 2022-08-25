@@ -1,16 +1,15 @@
 
 ; ******** Source: d:\Projekte\Test\hello.a
      1                          *=$0801
-     2  0801 0e080a009e202834   	!byte $0E,$08,$0A,$00,$9E,$20,$28,$34
-     3  0809 30393629000000     	!byte $30,$39,$36,$29,$00,$00,$00
-     4                          *=$1000
-     5                          BASIC_PRINT_FILE = $AB1E
-     6                          START
-     7  1000 a90d               	lda #<HELLOWORLD
-     8  1002 a010               	ldy #>HELLOWORLD
-     9  1004 201eab             	jsr BASIC_PRINT_FILE
-    10  1007 ee21d0             	inc $d021
-    11  100a 4c0010             	jmp START
-    12                          
-    13                          HELLOWORLD
-    14  100d 48454c4c4f20574f...	!text "HELLO WORLD"
+     2  0801 0e080a009e202832   	!byte $0E,$08,$0A,$00,$9E,$20,$28,$32
+     3  0809 30363429000000     	!byte $30,$36,$34,$29,$00,$00,$00
+     4                          BASIC_PRINT_FILE = $AB1E
+     5                          START
+     6  0810 a91d               	lda #<HELLOWORLD
+     7  0812 a008               	ldy #>HELLOWORLD
+     8  0814 201eab             	jsr BASIC_PRINT_FILE
+     9  0817 ee21d0             	inc $d021
+    10  081a 4c1a08             	jmp *
+    11                          
+    12                          HELLOWORLD
+    13  081d 48454c4c4f20574f...	!text "HELLO WORLD"
