@@ -1,0 +1,5 @@
+{
+	"c64.assemblerPath": "D:\\Tools\\acme\\acme.exe",
+	"c64.emulatorPath": "D:\\Tools\\VICE\\bin\\x64sc.exe",
+	"c64.debuggerPath": "D:\\Tools\\C64 65XE NES Debugger v0.64.58.6.win32\\C64Debugger.exe"
+}
