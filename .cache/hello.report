@@ -6,11 +6,11 @@
      4                          *=$1000
      5                          BASIC_PRINT_FILE = $AB1E
      6                          START
-     7  1000 a90d               	lda #<HELLOWORLD
-     8  1002 a010               	ldy #>HELLOWORLD
-     9  1004 201eab             	jsr BASIC_PRINT_FILE
-    10  1007 4c0010             	jmp START
-    11  100a 4c0a10             	jmp *
+     7  1000 ee20d0             	inc $d020
+     8  1003 a90d               	lda #<HELLOWORLD
+     9  1005 a010               	ldy #>HELLOWORLD
+    10  1007 201eab             	jsr BASIC_PRINT_FILE
+    11  100a 4c0010             	jmp START
     12                          
     13                          HELLOWORLD
     14  100d 48454c4c4f20574f...	!text "HELLO WORLD"
